@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- boxicons -->
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Tasha's Kitchen</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <nav class="nav">
+        <div>
+          <a href="#" class="logo"
+            ><i class="bx bx-home-alt-2"></i>Tasha's Kitchen</a
+          >
+        </div>
+        <!-- nav -->
+        <ul class="nav-list">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#shop">Our Shop</a></li>
+          <li><a href="#reviews">Our Customer</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="#"><i class="bx bx-search"></i></a>
+          <a href="#"><i class="bx bxs-cart"></i></a>
+          <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- home -->
+
+    <section class="home grid-two-col" id="home">
+      <div class="home-text">
+        <h1>Feast on <span>Mzanzi's</span> Finest Flavours</h1>
+        <div class="btn-group">
+          <a href="#" class="btn menu-btn"
+            >Explore Menu<i class="bx bxs-right-arrow"></i
+          ></a>
+          <a href="#" class="btn order-btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="images/hero-img.png" alt="" />
+      </div>
+    </section>
+
+    <!-- information -->
+
+    <section class="info grid-even-col">
+      <div class="card info-card">
+        <i class="bx bxs-time"></i>
+        <p class="card-title info-card-title">
+          <span>Mon -Thur: 8:30am - 5pm</span><br />
+          <span>Fri -Sat: 10:30am - 3pm</span>
+        </p>
+        <a href="#">Working Hours</a>
+      </div>
+
+      <div class="card info-card">
+        <i class="bx bx-current-location"></i>
+        <p class="card-title info-card-title">
+          123 Main Street, Johannesburg, South Africa
+        </p>
+        <a
+          href="https://goo.gl/maps/Ahy1KHHMzgpf4eh89?coh=178571&entry=tt"
+          target="_blank"
+          >Get Directions</a
+        >
+      </div>
+
+      <div class="card info-card">
+        <i class="bx bxs-phone-call"></i>
+        <p class="card-title info-card-title">+27 78 456 2586</p>
+        <a href="#">Call Us Now</a>
+      </div>
+    </section>
+
+    <!-- about us -->
+
+    <section class="about grid-two-col" id="about">
+      <div class="about-img">
+        <img src="images/about-img.png" alt="" />
+      </div>
+
+      <div class="about-text">
+        <h2 class="section-title">About Us</h2>
+        <p>
+          Tasha's Kitchen was founded in 2010 by Natasha Smith, a South African
+          chef with a passion for sharing her country's cuisine with the world.
+          After years of working in some of the country's top restaurants,
+          Natasha decided to strike out on her own and open a restaurant that
+          would showcase the best of South African food and hospitality.
+        </p>
+        <a href="#" class="btn"
+          >Explore Story<i class="bx bxs-right-arrow"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- our shop -->
+
+    <section class="shop" id="shop">
+      <div class="section-header">
+        <h2 class="section-title">Chef's Specials</h2>
+        <p class="section-subtitle">Customer Favourites</p>
+      </div>
+
+      <div class="shop-content grid-even-col">
+        <div class="card shop-card">
+          <img src="images/bunny-chow.png" alt="" />
+          <h4 class="card-title shop-card-title">Bunny Chow</h4>
+          <p>
+            A classic South African dish made with a hollowed-out loaf of bread
+            filled with spicy curry.
+          </p>
+
+          <div class="shop-card-row">
+            <div class="price">
+              <p>R49.99</p>
+            </div>
+
+            <div>
+              <a href="#" class="btn shop-btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="fav-icon">
+            <a href="#">
+              <i class="bx bx-heart empty"></i>
+              <i class="bx bxs-heart filled"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card shop-card">
+          <img src="images/wors.png" alt="" />
+          <h4 class="card-title shop-card-title">Boerewors Roll</h4>
+          <p>
+            A grilled sausage made with beef and pork, served on a roll with
+            tomato relish and chutney.
+          </p>
+
+          <div class="shop-card-row">
+            <div class="price">
+              <p>R39.99</p>
+            </div>
+
+            <div>
+              <a href="#" class="btn shop-btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="fav-icon">
+            <a href="#">
+              <i class="bx bx-heart empty"></i>
+              <i class="bx bxs-heart filled"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card shop-card">
+          <img src="images/pap-wors.png" alt="" />
+          <h4 class="card-title shop-card-title">Pap & Wors</h4>
+          <p>
+            A traditional South African dish of maize porridge and grilled
+            sausage.
+          </p>
+
+          <div class="shop-card-row">
+            <div class="price">
+              <p>R59.99</p>
+            </div>
+
+            <div>
+              <a href="#" class="btn shop-btn">Order Now</a>
+            </div>
+          </div>
+
+          <div class="fav-icon">
+            <a href="#">
+              <i class="bx bx-heart empty"></i>
+              <i class="bx bxs-heart filled"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-section-btn">
+        <a href="#" class="btn shop-btn"
+          >All Products<i class="bx bxs-right-arrow"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- reviews -->
+
+    <section class="reviews" id="reviews">
+      <div class="section-header">
+        <h2 class="section-title">Our Customers</h2>
+        <p class="section-subtitle">Client Reviews About Our Food</p>
+      </div>
+
+      <div class="reviews-content grid-even-col">
+        <div class="card review-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            pariatur ipsam enim inventore vero mollitia.
+          </p>
+
+          <div class="review-card-row">
+            <div class="reviewer-img">
+              <img src="images/person-1.jpg" alt="" />
+            </div>
+            <div class="review-card-row-text">
+              <h3 class="card-title review-card-title">John Karahan</h3>
+              <p class="review-card-subtitle">Food Vlogger</p>
+              <div class="ratings">
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card review-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+            animi laudantium ipsa fuga placeat consequatur.
+          </p>
+
+          <div class="review-card-row">
+            <div class="reviewer-img">
+              <img src="images/person-2.jpg" alt="" />
+            </div>
+            <div class="review-card-row-text">
+              <h3 class="card-title review-card-title">Janet van de Merwe</h3>
+              <p class="review-card-subtitle">Soccer Mom</p>
+              <div class="ratings">
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card review-card">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad omnis
+            voluptates quae excepturi, sequi nam cumque?
+          </p>
+
+          <div class="review-card-row">
+            <div class="reviewer-img">
+              <img src="images/person-3.jpg" alt="" />
+            </div>
+            <div class="review-card-row-text">
+              <h3 class="card-title review-card-title">Joanne Greyling</h3>
+              <p class="review-card-subtitle">Friendly Neighbour</p>
+              <div class="ratings">
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+                <a href="#"><i class="bx bxs-star"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+
+    <section class="contact" id="contact">
+      <div class="contact-content">
+        <div class="contact-text">
+          <h2 class="section-title">Contact Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+
+        <div class="social-links">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-github"></i></a>
+          <a href="#"><i class="bx bxl-google"></i></a>
+        </div>
+      </div>
+
+      <p>&copy; 2023 Tasha's Kitchen. All rights reserved.</p>
+    </section>
+
+    <!-- scroll top -->
+
+    <a href="#home" class="btn scroll-btn"
+      ><i class="bx bx-up-arrow-circle"></i
+    ></a>
+
+    <!-- link to scroll reveal -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- link to js -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
