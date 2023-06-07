@@ -1,13 +1,14 @@
-const header = document.querySelector("header");
-const menu = document.querySelector("#menu-icon");
-const navList = document.querySelector(".nav-list");
-
 // sticky header
+const header = document.querySelector("header");
+
 window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 80);
 });
 
-// navbar
+// navbar toggle
+const menu = document.querySelector("#menu-icon");
+const navList = document.querySelector(".nav-list");
+
 menu.onclick = () => {
   menu.classList.toggle("bx-x");
   navList.classList.toggle("open");
@@ -18,12 +19,57 @@ window.onscroll = () => {
   navList.classList.remove("open");
 };
 
+// active section nav link
+
+// Add an event listener to each link
+const navbarLinks = document.querySelectorAll(".nav-link");
+
+navbarLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    // Remove the "active" class from all links
+    navbarLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+
+    // Add the "active" class to the clicked link
+    this.classList.add("active");
+  });
+});
+
+// Function to determine the active page based on the current section in view
+function determineActivePage() {
+  const sections = document.querySelectorAll("section");
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+
+    if (
+      window.pageYOffset >= sectionTop &&
+      window.pageYOffset < sectionTop + sectionHeight
+    ) {
+      // Add the "active" class to the corresponding navbar link
+      navbarLinks.forEach((link) => {
+        if (link.getAttribute("href") === `#${sectionId}`) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    }
+  });
+}
+
+// Attach scroll event listener to determine the active page dynamically
+window.addEventListener("scroll", determineActivePage);
+
 // scroll reveal
 const scrollReveal = ScrollReveal({
   origin: "top",
   distance: "100px",
   duration: 2250,
-  reset: true,
+  reset: false,
 });
 
 scrollReveal.reveal(".home-text", { delay: 300 });
