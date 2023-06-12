@@ -20,7 +20,7 @@ The Tasha's Restaurant Website project aims to provide an intuitive and user-fri
 
 - **Section Highlighting**: JavaScript code is implemented to detect the currently visible section of the page and dynamically update the corresponding navigation link. This functionality improves navigation and provides users with visual feedback as they scroll through the website.
 
-## Screenshot
+## Screenshots
 
 <img src="https://github.com/chriszimbizi/tashas-kitchen-v2/assets/121321293/d5c5f61f-02f4-4969-9c74-da6d2222a0ea" height="350" alt="desktop-design" />
 <img src="https://github.com/chriszimbizi/tashas-kitchen-v2/assets/121321293/cf1f55f5-4cb7-445f-9cc2-45ce41719c89" height="350" alt="mobile-design"/>
