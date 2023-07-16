@@ -272,6 +272,13 @@ section {
 .card {
   background: var(--clr-neutral-900);
   border-radius: var(--border-radius);
+  transition: scale 350ms ease, opacity 350ms linear;
+}
+
+section:has(.card:is(:hover, :focus-within))
+  .card:not(:is(:hover, :focus-within)) {
+  scale: 0.8;
+  opacity: 0.7;
 }
 
 .card-title {
@@ -297,8 +304,7 @@ section {
   letter-spacing: var(--letter-spacing);
 }
 
-.info-card a:hover,
-.info-card a:focus {
+.info-card a:is(:hover, :focus) {
   color: var(--clr-primary-400);
 }
 
@@ -349,14 +355,10 @@ section {
 
 .shop-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   object-fit: scale-down;
   cursor: pointer;
-  transition: var(--transition-all);
-}
-
-.shop-card img:hover {
-  scale: 1.1;
+  margin-block-start: 3rem;
 }
 
 .shop-card-title {
@@ -372,7 +374,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-block-start: 1rem;
 }
 
 .shop-card-row .price p {
@@ -501,12 +503,15 @@ section {
   margin-inline: 1.25rem;
   font-size: 2rem;
   color: var(--clr-neutral-400);
-  transition: var(--transition-all);
+  transition: scale 250ms ease-out;
 }
 
-.social-links i:hover,
-.social-links i:focus {
+.social-links i:is(:hover, :focus) {
   color: var(--clr-primary-400);
+}
+
+.social-links:has(i:is(:hover, :focus)) i:not(:is(:hover, :focus)) {
+  scale: 0.8;
 }
 
 .contact > p {
