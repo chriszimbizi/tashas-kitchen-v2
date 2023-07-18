@@ -5,19 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- css -->
-
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- boxicons -->
-
+    <!-- Boxicons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
 
-    <!-- google fonts -->
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,18 +22,22 @@
       rel="stylesheet"
     />
 
-    <!-- scroll reveal -->
-
+    <!-- ScrollReveal -->
     <script defer src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- JS -->
+    <!-- GSAP -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"
+    ></script>
 
+    <!-- JS -->
     <script defer src="index.js"></script>
 
     <title>Tasha's Kitchen</title>
   </head>
   <body>
-    <!-- header -->
+    <!-- Header -->
     <header class="header">
       <nav class="nav">
         <div>
@@ -60,8 +61,7 @@
       </nav>
     </header>
 
-    <!-- home -->
-
+    <!-- Home -->
     <section class="home grid-two-col" id="home">
       <div class="home-text">
         <h1>Feast on <span>Mzanzi's</span> Finest Flavours</h1>
@@ -78,8 +78,7 @@
       </div>
     </section>
 
-    <!-- information -->
-
+    <!-- Information -->
     <section class="info grid-even-col">
       <div class="card info-card">
         <i class="bx bxs-time"></i>
@@ -109,8 +108,7 @@
       </div>
     </section>
 
-    <!-- about us -->
-
+    <!-- About Us -->
     <section class="about grid-two-col" id="about">
       <div class="about-img">
         <img src="images/about-img.png" alt="" />
@@ -131,8 +129,7 @@
       </div>
     </section>
 
-    <!-- our shop -->
-
+    <!-- Shop -->
     <section class="shop" id="shop">
       <div class="section-header">
         <h2 class="section-title">Chef's Specials</h2>
@@ -226,8 +223,7 @@
       </div>
     </section>
 
-    <!-- reviews -->
-
+    <!-- Reviews -->
     <section class="reviews" id="reviews">
       <div class="section-header">
         <h2 class="section-title">Our Customers</h2>
@@ -309,8 +305,7 @@
       </div>
     </section>
 
-    <!-- contact -->
-
+    <!-- Contact -->
     <section class="contact" id="contact">
       <div class="contact-content">
         <div class="contact-text">
@@ -335,10 +330,12 @@
       <p>&copy; 2023 Tasha's Kitchen. All rights reserved.</p>
     </section>
 
-    <!-- scroll top -->
-
+    <!-- Scroll to Top -->
     <a href="#home" class="btn scroll-btn"
       ><i class="bx bx-up-arrow-circle"></i
     ></a>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
   </body>
 </html>

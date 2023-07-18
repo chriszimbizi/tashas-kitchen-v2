@@ -1,11 +1,11 @@
-// sticky header
+// Sticky header
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 80);
 });
 
-// navbar toggle
+// Navbar toggle
 const menu = document.querySelector("#menu-icon");
 const navList = document.querySelector(".nav-list");
 
@@ -19,8 +19,7 @@ window.onscroll = () => {
   navList.classList.remove("open");
 };
 
-// active section nav link
-
+// Active section nav link
 // Add an event listener to each link
 const navbarLinks = document.querySelectorAll(".nav-link");
 
@@ -39,15 +38,14 @@ navbarLinks.forEach((link) => {
 // Function to determine the active page based on the current section in view
 function determineActivePage() {
   const sections = document.querySelectorAll("section");
-
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute("id");
 
     if (
-      window.pageYOffset >= sectionTop &&
-      window.pageYOffset < sectionTop + sectionHeight
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
     ) {
       // Add the "active" class to the corresponding navbar link
       navbarLinks.forEach((link) => {
@@ -64,7 +62,7 @@ function determineActivePage() {
 // Attach scroll event listener to determine the active page dynamically
 window.addEventListener("scroll", determineActivePage);
 
-// scroll reveal
+// ScrollReveal
 const scrollReveal = ScrollReveal({
   origin: "top",
   distance: "100px",
@@ -83,3 +81,26 @@ scrollReveal.reveal(".shop-content");
 
 scrollReveal.reveal(".reviews .section-header", { delay: 200 });
 scrollReveal.reveal(".reviews-content, .contact");
+
+// Progress Bar
+const progressBar = document.getElementById("progress-bar");
+
+const animateProgressBar = () => {
+  // Calculate the total scrollable height of the document
+  const documentHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+
+  // Calculate the current scroll progress as a percentage
+  const scrollProgress = (window.scrollY / documentHeight) * 100;
+
+  // Animate the width of the progress bar
+  gsap.to(progressBar, {
+    width: `${scrollProgress}%`,
+    ease: "power1.out",
+  });
+
+  // Request the next animation frame to continuously update the progress bar
+  requestAnimationFrame(animateProgressBar);
+};
+
+animateProgressBar();

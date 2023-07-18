@@ -1,4 +1,4 @@
-/* custom properties */
+/* Custom Properties */
 :root {
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-400: hsl(14, 10%, 60%);
@@ -18,7 +18,7 @@
   --letter-spacing: 1px;
 }
 
-/* reset */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -76,7 +76,7 @@ h3 {
   line-height: 1;
 }
 
-/* utility classes */
+/* Utility Classes */
 
 .grid-even-col {
   display: grid;
@@ -89,8 +89,7 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
 }
 
-/* styling */
-
+/* General Styling */
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
@@ -98,8 +97,7 @@ body {
   color: var(--text-color);
 }
 
-/* header */
-
+/* Header */
 .header {
   position: fixed;
   width: 100%;
@@ -194,8 +192,7 @@ i {
   display: none;
 }
 
-/* home */
-
+/* Home */
 section {
   padding: 4.375rem 14%;
 }
@@ -262,8 +259,7 @@ section {
   border-radius: var(--border-radius);
 }
 
-/* information */
-
+/* Information */
 .info {
   padding: 2rem 14% 4rem;
   text-align: center;
@@ -324,8 +320,7 @@ section:has(.card:is(:hover, :focus-within))
   margin-bottom: 2rem;
 }
 
-/* our shop */
-
+/* Shop */
 .section-header {
   text-align: center;
 }
@@ -435,8 +430,7 @@ section:has(.card:is(:hover, :focus-within))
   margin-top: 6rem;
 }
 
-/* reviews */
-
+/* Reviews */
 .reviews-content {
   align-items: center;
   margin-top: 4rem;
@@ -480,8 +474,7 @@ section:has(.card:is(:hover, :focus-within))
   margin-right: 0.25rem;
 }
 
-/* contact */
-
+/* Contact */
 .contact-content {
   display: flex;
   align-items: center;
@@ -503,24 +496,22 @@ section:has(.card:is(:hover, :focus-within))
   margin-inline: 1.25rem;
   font-size: 2rem;
   color: var(--clr-neutral-400);
-  transition: scale 250ms ease-out;
+  transition: var(--transition-all);
 }
 
 .social-links i:is(:hover, :focus) {
   color: var(--clr-primary-400);
+  transform: translateY(-5px);
 }
 
-.social-links:has(i:is(:hover, :focus)) i:not(:is(:hover, :focus)) {
-  scale: 0.8;
-}
 
 .contact > p {
   color: var(--clr-neutral-400);
   margin-top: 4rem;
   text-align: center;
 }
-/* scroll */
 
+/* Scroll to Top */
 .scroll-btn {
   position: fixed;
   bottom: 4rem;
@@ -531,8 +522,18 @@ section:has(.card:is(:hover, :focus-within))
   font-size: 2.5rem;
 }
 
-/* media queries */
+/* Progress Bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.5rem;
+  width: 0%;
+  z-index: 9999;
+  background: var(--clr-primary-400);
+}
 
+/* Media Queries */
 @media (max-width: 1545px) {
   .header {
     padding: 1.5rem 4%;
