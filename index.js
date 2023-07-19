@@ -1,3 +1,17 @@
+// Lenis
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 // Sticky header
 const header = document.querySelector("header");
 
@@ -62,26 +76,6 @@ function determineActivePage() {
 // Attach scroll event listener to determine the active page dynamically
 window.addEventListener("scroll", determineActivePage);
 
-// ScrollReveal
-const scrollReveal = ScrollReveal({
-  origin: "top",
-  distance: "100px",
-  duration: 2250,
-  reset: false,
-});
-
-scrollReveal.reveal(".home-text", { delay: 300 });
-scrollReveal.reveal(".home-img", { delay: 100 });
-
-scrollReveal.reveal(".about-text", { delay: 200 });
-scrollReveal.reveal(".about-img");
-
-scrollReveal.reveal(".shop .section-header", { delay: 200 });
-scrollReveal.reveal(".shop-content");
-
-scrollReveal.reveal(".reviews .section-header", { delay: 200 });
-scrollReveal.reveal(".reviews-content, .contact");
-
 // Progress Bar
 const progressBar = document.getElementById("progress-bar");
 
@@ -104,3 +98,23 @@ const animateProgressBar = () => {
 };
 
 animateProgressBar();
+
+// ScrollReveal
+const scrollReveal = ScrollReveal({
+  origin: "top",
+  distance: "100px",
+  duration: 2250,
+  reset: false,
+});
+
+scrollReveal.reveal(".home-text", { delay: 300 });
+scrollReveal.reveal(".home-img", { delay: 100 });
+
+scrollReveal.reveal(".about-text", { delay: 200 });
+scrollReveal.reveal(".about-img");
+
+scrollReveal.reveal(".shop .section-header", { delay: 200 });
+scrollReveal.reveal(".shop-content");
+
+scrollReveal.reveal(".reviews .section-header", { delay: 200 });
+scrollReveal.reveal(".reviews-content, .contact");
