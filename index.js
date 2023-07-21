@@ -28,7 +28,7 @@ window.addEventListener("scroll", function () {
 });
 
 // Navbar toggle
-const menu = document.querySelector("#menu-icon");
+const menu = document.querySelector(".menu-icon");
 const navList = document.querySelector(".nav-list");
 
 menu.onclick = () => {

@@ -12,9 +12,9 @@
   --fs-lg: 4.5rem;
   --fs-h2: 2.6rem;
 
-  --transition-all: all 375ms ease;
+  --transition-all: all 250ms ease;
   --box-shadow: 0px 1px 25px var(--clr-primary-400);
-  --border-radius: 2rem;
+  --border-radius: 1rem;
   --letter-spacing: 1px;
 }
 
@@ -98,7 +98,6 @@ h3 {
 }
 
 /* Utility Classes */
-
 .grid-even-col {
   display: flex;
   justify-content: center;
@@ -114,7 +113,6 @@ h3 {
 /* General Styling */
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -197,14 +195,13 @@ header.sticky {
   & i {
     color: var(--bg-color);
 
-    & i:is(:hover, :focus) {
+    &:is(:hover, :focus) {
       color: var(--text-color);
-      scale: 1.2;
     }
   }
 }
 
-#menu-icon {
+.menu-icon {
   font-size: 2rem;
   color: var(--bg-color);
   z-index: 10001;
@@ -242,7 +239,7 @@ section {
 
 .btn {
   display: inline-flex;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
   padding: 1rem 2rem;
   color: var(--clr-primary-400);
@@ -265,11 +262,6 @@ section {
     box-shadow: var(--box-shadow);
   }
 }
-
-.order-btn:is(:hover, :focus) {
-  scale: 1.1;
-}
-
 .home-img img {
   width: 100%;
   padding: 2rem;
@@ -288,11 +280,12 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
 
 section:has(.card:is(:hover, :focus-within))
   .card:not(:is(:hover, :focus-within)) {
-  scale: 0.8;
+  scale: 0.9;
   opacity: 0.7;
 }
 
@@ -309,6 +302,7 @@ section:has(.card:is(:hover, :focus-within))
   & i {
     font-size: var(--fs-h2);
     color: var(--clr-primary-400);
+    margin-block-end: 1rem;
   }
 
   & card-title {
@@ -368,13 +362,12 @@ section:has(.card:is(:hover, :focus-within))
   padding: 0.75rem 2rem 2.5rem;
   text-align: center;
   flex: 1 19em;
-  max-width: 26em;
+  max-width: 23em;
 
   & img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: scale-down;
-    cursor: pointer;
     margin-block-start: 3rem;
   }
 
@@ -482,7 +475,7 @@ section:has(.card:is(:hover, :focus-within))
 }
 
 .reviewer-img img {
-  border-radius: var(--border-radius);
+  border-radius: 50%;
 }
 
 .review-card-subtitle {
@@ -500,10 +493,8 @@ section:has(.card:is(:hover, :focus-within))
 
 /* Contact */
 .contact-content {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
+    justify-items: center;
 }
 
 .contact-text {
@@ -515,16 +506,19 @@ section:has(.card:is(:hover, :focus-within))
   }
 }
 
-.social-links i {
-  display: inline-block;
-  margin-inline: 1.25rem;
-  font-size: 2rem;
-  color: var(--clr-neutral-400);
-  transition: var(--transition-all);
+.social-links {
+  display: flex;
+  gap: 2rem;
 
-  &:is(:hover, :focus) {
-    color: var(--clr-primary-400);
-    transform: translateY(-5px);
+  & i {
+    font-size: 2rem;
+    color: var(--clr-neutral-400);
+    transition: var(--transition-all);
+
+    &:is(:hover, :focus) {
+      color: var(--clr-primary-400);
+      transform: translateY(-5px);
+    }
   }
 }
 
@@ -550,7 +544,7 @@ section:has(.card:is(:hover, :focus-within))
   position: fixed;
   top: 0;
   left: 0;
-  height: 0.5rem;
+  height: 0.25rem;
   width: 0%;
   z-index: 9999;
   background: var(--clr-primary-400);
@@ -597,7 +591,7 @@ section:has(.card:is(:hover, :focus-within))
     font-size: 1rem;
   }
 
-  #menu-icon {
+  .menu-icon {
     display: initial;
   }
 
@@ -606,10 +600,9 @@ section:has(.card:is(:hover, :focus-within))
     top: -1000%;
     left: 0;
     right: 0;
-    display: flex;
+    display: grid;
+    justify-items: start;
     gap: 0;
-    flex-direction: column;
-    align-items: flex-start;
     background: var(--clr-neutral-900);
     transition: var(--transition-all);
 
