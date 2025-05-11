@@ -494,7 +494,7 @@ section:has(.card:is(:hover, :focus-within))
 /* Contact */
 .contact-content {
   display: grid;
-    justify-items: center;
+  justify-items: center;
 }
 
 .contact-text {
